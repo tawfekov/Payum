@@ -12,12 +12,12 @@ interface TokenInterface extends DetailsAggregateInterface, DetailsAwareInterfac
     /**
      * @return string
      */
-    function getToken();
+    function getHash();
 
     /**
-     * @param string $token
+     * @param string $hash
      */
-    function setToken($token);
+    function setHash($hash);
 
     /**
      * @return string

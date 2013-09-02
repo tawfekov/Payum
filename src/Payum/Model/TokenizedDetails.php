@@ -3,7 +3,7 @@ namespace Payum\Model;
 
 use Payum\Exception\InvalidArgumentException;
 use Payum\Storage\Identificator;
-use Payum\Util\Random;
+use Payum\Security\Util\Random;
 
 class TokenizedDetails implements DetailsAggregateInterface, DetailsAwareInterface 
 {

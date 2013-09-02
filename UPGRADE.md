@@ -3,8 +3,11 @@
 
 * [Doctrine] `TokenizedDetails` mapping schema was updated. details field is now accept `NULL`.
 * [Doctrine] `TokenizedDetails` class was renamed to `Token` and now it extends `Payum\Security\Token`.
+* [Doctrine] `Token` mapping changed. The field `token` was renamed to `hash`.
 * [Security] `Random` class was moved to `Payum\Security` namespace.
 * [Security] `TokenizedDetails` class was moved to `Payum\Security` namespace and renamed to Token.
+* [Security] `Token` methods `getToken` and `setToken` were renamed to `getHash` and `setHash`.
+* [Security] The default token generated in `Token::__constructor` not include `time()` any more.
 * [Storage] The method `Storage::supportModel` accepts only model object. Support of model class was removed.
 * [Storage] The method `Storage::findModelByIdentificator` was added to storage interface.
 

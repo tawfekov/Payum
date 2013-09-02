@@ -46,7 +46,7 @@ class PaymentDetailsTest extends OrmTest
         $this->em->persist($token);
         $this->em->flush();
         
-        $hash = $token->getToken();
+        $hash = $token->getHash();
 
         $this->em->clear();
         
@@ -54,7 +54,7 @@ class PaymentDetailsTest extends OrmTest
         
         $this->assertNotSame($token, $foundToken);
         
-        $this->assertEquals($token->getToken(), $foundToken->getToken());
+        $this->assertEquals($token->getHash(), $foundToken->getHash());
         $this->assertEquals($token->getTargetUrl(), $foundToken->getTargetUrl());
         $this->assertEquals($token->getAfterUrl(), $foundToken->getAfterUrl());
 

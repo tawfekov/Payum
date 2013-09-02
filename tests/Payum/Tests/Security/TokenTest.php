@@ -27,11 +27,11 @@ class TokenTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function shouldAllowGetTokenGeneratedInConstructor()
+    public function shouldAllowGetHashGeneratedInConstructor()
     {
         $token = new Token;
 
-        $this->assertNotEmpty($token->getToken());
+        $this->assertNotEmpty($token->getHash());
     }
 
     /**
@@ -42,29 +42,29 @@ class TokenTest extends \PHPUnit_Framework_TestCase
         $tokenOne = new Token;
         $tokenTwo = new Token;
 
-        $this->assertNotEquals($tokenOne->getToken(), $tokenTwo->getToken());
+        $this->assertNotEquals($tokenOne->getHash(), $tokenTwo->getHash());
     }
 
     /**
      * @test
      */
-    public function shouldAllowSetToken()
+    public function shouldAllowSetHash()
     {
         $token = new Token;
 
-        $token->setToken('foo');
+        $token->setHash('foo');
     }
 
     /**
      * @test
      */
-    public function shouldAllowGetPreviouslySetToken()
+    public function shouldAllowGetPreviouslySetHash()
     {
         $token = new Token;
 
-        $token->setToken('theToken');
+        $token->setHash('theToken');
 
-        $this->assertSame('theToken', $token->getToken());
+        $this->assertSame('theToken', $token->getHash());
     }
 
     /**

@@ -17,7 +17,7 @@ class Token implements TokenInterface
     /**
      * @var string
      */
-    protected $token;
+    protected $hash;
 
     /**
      * @var string
@@ -36,7 +36,7 @@ class Token implements TokenInterface
 
     public function __construct()
     {
-        $this->token = time().'-'.Random::generateToken();
+        $this->hash = Random::generateToken();
     }
 
     /**
@@ -70,17 +70,17 @@ class Token implements TokenInterface
     /**
      * {@inheritDoc}
      */
-    public function getToken()
+    public function getHash()
     {
-        return $this->token;
+        return $this->hash;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setToken($token)
+    public function setHash($hash)
     {
-        $this->token = $token;
+        $this->hash = $hash;
     }
 
     /**

@@ -6,7 +6,7 @@
 >
     <mapped-superclass name="Payum\Bridge\Doctrine\Entity\Token">
 
-        <id name="token" column="token" type="string" />
+        <id name="hash" column="hash" type="string" />
 
         <field name="details" column="details" type="object" nullable="true" />
 
