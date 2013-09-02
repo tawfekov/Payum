@@ -10,6 +10,8 @@
 * [Security] The default token generated in `Token::__constructor` not include `time()` any more.
 * [Storage] The method `Storage::supportModel` accepts only model object. Support of model class was removed.
 * [Storage] The method `Storage::findModelByIdentificator` was added to storage interface.
+* [Request] `CaptureTokenizedDetailsRequest` was renamed to `SecuredCaptureRequest`.
+* [Request] `CaptureTokenizedDetailsRequest::getTokenizedDetails` method was renamed to `getToken`.
 
 0.4 to 0.5
 ==========
