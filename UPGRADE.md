@@ -12,6 +12,9 @@
 * [Storage] The method `Storage::findModelByIdentificator` was added to storage interface.
 * [Request] `CaptureTokenizedDetailsRequest` was renamed to `SecuredCaptureRequest`.
 * [Request] `CaptureTokenizedDetailsRequest::getTokenizedDetails` method was renamed to `getToken`.
+* [Request] `NotifyTokenizedDetailsRequest` was renamed to `SecuredNotifyRequest`.
+* [Request] `NotifyTokenizedDetailsRequest::getTokenizedDetails` method was renamed to `getToken`.
+* [Request] `NotifyTokenizedDetailsRequest` now extends `BaseModelRequest`.
 
 0.4 to 0.5
 ==========
